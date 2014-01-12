@@ -36,6 +36,7 @@ BiTNode *CreateBiTree (BiTNode *bt)
 {/*按先序次序输入二叉树中结点的值(可为字符型或整型)*/
   TElemType ch;
   scanf(form,&ch);
+  fflush(stdin);
  if(ch==Nil)
    bt=NULL;
  else
@@ -70,49 +71,48 @@ void PrintTree(BiTNode *bt,int i)
   }
 }
 
-int Max(int a, int b){
-	return a>b?a:b;
-}
-
-int maxDepth(BiTNode *root, int depth){
-	if(root == NULL){
-		return depth;	
+int isSameTree(BiTree A, BiTree B){
+	int va,vb;
+	va = vb = 0;
+	if( A == NULL && B == NULL)
+	{
+		return 1;
+	}else if(A == NULL || B == NULL){
+		return 0;
+	}else{
+		if(A->data == B->data){
+			va = isSameTree(A->left,B->left);
+			vb = isSameTree(A->right,B->right);
+			return (va && vb);
+		}else{
+			return 0;
+		}
 	}
-	return Max(maxDepth(root->left,depth+1), maxDepth(root->right,depth+1));
-
-	/* my previous code returns the 0 depth.	
-	int left_depth = depth; 
-	int right_depth = depth;
-	if(root->left == NULL && root->right == NULL){
-		return depth = Max(left_depth,right_depth);
-	}
-	if(root->left != NULL){
-		left_depth ++;
-		return maxDepth(root->left,left_depth);
-	}
-	if(root->right != NULL){
-		right_depth ++;
-		right_depth = maxDepth(root->right,right_depth);
-	}
-	*/
 }
 
 int main()
 {
-  int i, max_depth = 0;
-  int depth = 0;
-  BiTree bt;
-  bt=initBiTree(bt);
-  #if CHAR
-   printf("请先序输入二叉树(如:ab三个空格 a为根节点，b为左子树的二叉树)\n");
-  #else 
-   printf("请先序输入二叉树(如:1 2 0 0 0  1为根节点，2为左子树的二叉树)\n");
-  #endif
-  bt=CreateBiTree(bt);
+  BiTree ba,bb;
+
+  // Create first Tree
+  ba=initBiTree(ba);
+  printf("请先序输入二叉树(如:ab三个空格 a为根节点，b为左子树的二叉树)\n");
+  ba=CreateBiTree(ba);
   printf("输入建立的二叉树!!!\n");
   
-  max_depth = maxDepth(bt,depth);
-  printf("The maximum depth of the tree is: %d \n",max_depth);
- 
-  PrintTree(bt,5);
+  /* some problems with the stdin
+  fflush(stdin);
+  // Create another Tree
+  bb = initBiTree(bb);
+  printf("请先序输入二叉树(如:ab三个空格 a为根节点，b为左子树的二叉树)\n");
+  bb = CreateBiTree(bb);	
+  printf("输入建立的二叉树!!!\n");
+  */
+  
+  printf("These two tree are: %d \n",isSameTree(ba,ba)); 
+  // Test the result 
+  PrintTree(ba,5);
+  PrintTree(bb,5);
+
+  return 0;
 }
