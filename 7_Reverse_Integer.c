@@ -1,4 +1,5 @@
 /*
+ * Optimal way found !
  * I believe that this is the dumpest way to the question, I need a array 
  * array and calculate the digit separately.
  * Maybe calculate in bit is a efficient but hard-to-think way
@@ -7,7 +8,9 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
+/* dumb way, no need that space and only one time calculation
 int Reverse(int x){
 	
 	int count = 0;
@@ -36,12 +39,32 @@ int Reverse(int x){
 
 	return z;
 }
+*/
+
+int Reverse2(int n)
+{
+	int rev = 0;
+	bool isneg = false;
+
+	if(n < 0)
+	{
+		isneg = true;
+		n = -n;
+	}
+
+	while(n != 0){
+		rev = rev*10 + n%10;
+		n /= 10;
+	}
+
+	return rev * (isneg?-1:1);
+}
 
 int main(void)
 {
 	int integer, reverse;
-	integer = 123445;
-	reverse = Reverse(integer);
+	integer = -123445;
+	reverse = Reverse2(integer);
 
 	printf("The integer is %d after reverse is %d \n",integer, reverse);
 	return 0;
