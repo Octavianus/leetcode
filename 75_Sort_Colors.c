@@ -11,9 +11,9 @@
 #define GET_ARRAY_LENGTH(a,l){l=(sizeof(a)/sizeof(a[0]));}
 
 // Aggregate the data by the number.
-int Sort_Colors(int *a, int n){
+int Sort_Color(int *a, int n){
 	int status = 0;
-	int color[4] = {0,0,0,0};
+	char color[4] = {0,0,0,0};
 
 	int i;
 	for(i = 0; i < n; i++)
@@ -36,7 +36,7 @@ int Sort_Colors(int *a, int n){
 	}
 
 
-	while(n3 < color[1])
+	while(n3 < color[3])
 	{
 		n3++;
 		a[counter++] = 3;
@@ -77,7 +77,7 @@ int main(void){
 	int Object[]={1,2,3,1,2,1,3,2,1,2,3,2};
 	int n;
 	GET_ARRAY_LENGTH(Object, n);
-	if(OptSort_Color(Object, n))
+	if(Sort_Color(Object, n))
 	{
 		int i;
 		for(i = 0; i < n; i++)
