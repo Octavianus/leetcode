@@ -18,23 +18,45 @@ using namespace std;
 
 class Solution{
 	public:
-		void recursion(int left, int right, vector<string>& vector, string s){
+		void recursion(int left,
+			       int right, 
+			       vector<string>& vector, 
+			       string s){
+			if(left > right)
+				return;
+			if(left){
+				recursion(left - 1, right, vector, s + "(");	
+			}
+			if(right){
+				recursion(left, right - 1, vector, s + ")");
+			}
+
+			if(!(left || right))
+				vector.push_back(s);
 		}
 
 		vector<string> GenerateParenthesis(int n){
 			vector<string> tmpv;
-			if(n <= 0) return tmpv = "";
-			if(n == 1) return tmpv = "()";
+			if(n <= 0) return vector<string>(1,"");
+			if(n == 1) return vector<string>(1,"()");
 			recursion(n, n, tmpv, "");
-			return result;
+			return tmpv;
 		}
-}
+};
 
 int main(void){
 
 	int numofP = 3;
-	vector<string> result = Generate
-	for( vector<string>::iterator it = GenerateParenthesis(numofP).begin()
+	Solution *sol;
+	sol = new Solution();
+	vector<string> result = sol->GenerateParenthesis(numofP);
+	int i = 0;	
+
+	// Very strange c++ template, we need to declare all the parameter in the same type in the vector name space
+	for(vector<string>::iterator it = result.begin(); it != result.end(); ++it){
+		i ++;
+		cout <<"Pairs " << i << ": " << *it <<endl;
+	}
 
 	return 0;
 }
