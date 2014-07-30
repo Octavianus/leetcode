@@ -331,11 +331,12 @@ GET_ARRAY_LENGTH	3000_String.C	13;"	d	file:
 GET_ARRAY_LENGTH	35_Search_Insert_Postion.c	11;"	d	file:
 GET_ARRAY_LENGTH	53_Maximum_Subarray_DivedAndConquer.c	9;"	d	file:
 GET_ARRAY_LENGTH	53_Maximum_Subarray_DynamicPro.c	9;"	d	file:
-GET_ARRAY_LENGTH	75_Sort_Colors.c	8;"	d	file:
+GET_ARRAY_LENGTH	75_Sort_Colors.c	11;"	d	file:
 GET_LENGTH	1000_Merge_Sort.c	4;"	d	file:
 GET_LENGTH	108_Convert_Sorted_Array_To_BST.c	5;"	d	file:
 GET_LENGTH	13_Roman_Integer.c	/^void GET_LENGTH(char *a, int *length){$/;"	f
 GET_LENGTH	2000_Quick_Sort.c	4;"	d	file:
+GenerateParenthesis	22_Generate_Parenthess.C	/^		vector<string> GenerateParenthesis(int n){$/;"	f	class:Solution
 GenericNames	ctags-5.6/eiffel.c	/^static stringList *GenericNames;$/;"	v	file:
 H	133_Single_Number.c	/^	element *H;$/;"	m	struct:Htable	file:
 HASH_EXPONENT	ctags-5.6/keyword.c	27;"	d	file:
@@ -1032,6 +1033,7 @@ OUTPUT_PATH_SEPARATOR	ctags-5.6/routines.h	40;"	d
 OUTPUT_PATH_SEPARATOR	ctags-5.6/routines.h	42;"	d
 O_RDWR	ctags-5.6/entry.c	71;"	d	file:
 OpKinds	ctags-5.6/asm.c	/^static const opKind OpKinds [] = {$/;"	v	file:
+OptSort_Color	75_Sort_Colors.c	/^int OptSort_Color(int *A, int n){$/;"	f
 Option	ctags-5.6/options.c	/^optionValues Option = {$/;"	v
 OptionFiles	ctags-5.6/options.c	/^static stringList *OptionFiles;$/;"	v	file:
 P	ctags-5.6/mk_qdos.mak	/^P = drv1_C68_$/;"	m
@@ -1198,9 +1200,11 @@ SlangParser	ctags-5.6/slang.c	/^extern parserDefinition* SlangParser (void)$/;"	
 SmlKeywordTypes	ctags-5.6/sml.c	/^} SmlKeywordTypes [] = {$/;"	v	typeref:struct:__anon36	file:
 SmlKinds	ctags-5.6/sml.c	/^static kindOption SmlKinds[] = {$/;"	v	file:
 SmlParser	ctags-5.6/sml.c	/^extern parserDefinition *SmlParser (void)$/;"	f
+Solution	22_Generate_Parenthess.C	/^class Solution{$/;"	c	file:
+Solution	62_Unique_Paths.C	/^class Solution{$/;"	c	file:
 SortMethod	ctags-5.6/readtags.c	/^static sortType SortMethod;$/;"	v	file:
 SortOverride	ctags-5.6/readtags.c	/^static int SortOverride;$/;"	v	file:
-Sort_Colors	75_Sort_Colors.c	/^int Sort_Colors(int *a){$/;"	f
+Sort_Color	75_Sort_Colors.c	/^int Sort_Color(int *a, int n){$/;"	f
 SqlKeywordTable	ctags-5.6/sql.c	/^static const keywordDesc SqlKeywordTable [] = {$/;"	v	file:
 SqlKinds	ctags-5.6/sql.c	/^static kindOption SqlKinds [] = {$/;"	v	file:
 SqlParser	ctags-5.6/sql.c	/^extern parserDefinition* SqlParser (void)$/;"	f
@@ -2259,6 +2263,7 @@ main	13_Roman_Integer.c	/^int main(void)$/;"	f
 main	2000_Quick_Sort.c	/^int main(void){$/;"	f
 main	21_Merge_Two_Sorted_Lists.c	/^int main(void)$/;"	f
 main	21__Merge_Two_Sorted_Lists.c	/^int main(void)$/;"	f
+main	22_Generate_Parenthess.C	/^int main(void){$/;"	f
 main	24_Swap_Nodes_In_Pairs.c	/^int main(void)$/;"	f
 main	26_Remove_Dup_Sorted_Array.c	/^int main(void){$/;"	f
 main	27_Remove_Element.c	/^int main(void){$/;"	f
@@ -2268,8 +2273,9 @@ main	35_Search_Insert_Postion.c	/^int main(void){$/;"	f
 main	4000_PrintLinkList_FromTailtoHead.c	/^int main(void)$/;"	f
 main	53_Maximum_Subarray_DivedAndConquer.c	/^int main(void){$/;"	f
 main	53_Maximum_Subarray_DynamicPro.c	/^int main(void){$/;"	f
+main	62_Unique_Paths.C	/^int main(void){$/;"	f
 main	70__Climbing_Stairs.c	/^int main(void){$/;"	f
-main	75_Sort_Colors.c	/^void main(void){$/;"	f
+main	75_Sort_Colors.c	/^int main(void){$/;"	f
 main	7_Reverse_Integer.c	/^int main(void)$/;"	f
 main	83_Remove_Duplicates_From_Sorted_List.c	/^int main(void)$/;"	f
 main	88_Merge_Two_Sorted_Array.c	/^int main(void){$/;"	f
@@ -2647,6 +2653,7 @@ readdir	ctags-5.6/mac.c	/^struct dirent *readdir(DIR *dirp)$/;"	f
 recurse	ctags-5.6/options.h	/^	boolean recurse;        \/* -R  recurse into directories *\/$/;"	m	struct:sOptionValues
 recurseIntoDirectory	ctags-5.6/main.c	/^static boolean recurseIntoDirectory (const char *const dirName)$/;"	f	file:
 recurseUsingOpendir	ctags-5.6/main.c	/^static boolean recurseUsingOpendir (const char *const dirName)$/;"	f	file:
+recursion	22_Generate_Parenthess.C	/^		void recursion(int left,$/;"	f	class:Solution
 regex	ctags-5.6/parse.h	/^	boolean regex;                 \/* is this a regex parser? *\/$/;"	m	struct:__anon47
 regexBroken	ctags-5.6/lregex.c	/^static boolean regexBroken = FALSE;$/;"	v	file:
 regexCallback	ctags-5.6/parse.h	/^typedef void (*regexCallback) (const char *line, const regexMatch *matches, unsigned int count);$/;"	t
@@ -2938,6 +2945,7 @@ ungetChar	ctags-5.6/fortran.c	/^static void ungetChar (const int c)$/;"	f	file:
 ungetch	ctags-5.6/get.c	/^	int		ungetch, ungetch2;   \/* ungotten characters, if any *\/$/;"	m	struct:sCppState	file:
 ungetch	ctags-5.6/read.h	/^	int         ungetch;       \/* a single character that was ungotten *\/$/;"	m	struct:sInputFile
 ungetch2	ctags-5.6/get.c	/^	int		ungetch, ungetch2;   \/* ungotten characters, if any *\/$/;"	m	struct:sCppState	file:
+uniquePaths	62_Unique_Paths.C	/^		int uniquePaths(int m, int n) {$/;"	f	class:Solution
 updatePseudoTags	ctags-5.6/entry.c	/^static long unsigned int updatePseudoTags (FILE *const fp)$/;"	f	file:
 updateSortedFlag	ctags-5.6/entry.c	/^static void updateSortedFlag ($/;"	f	file:
 url	ctags-5.6/readtags.c	/^		char *url;$/;"	m	struct:sTagFile::__anon22	file:
